@@ -1,0 +1,17 @@
+node_modules
+.DS_Store
+dist
+*.local
+.vite-inspect
+.remote-assets
+components.d.ts
+
+*.pdf
+
+# Emacs backup files
+*#
+*~
+*.swp
+
+# Notes
+*notes.org
