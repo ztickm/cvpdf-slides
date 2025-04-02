@@ -5,7 +5,7 @@ theme: the-unnamed
 background: https://cover.sli.dev
 title: Semantic CV formats in PDF, a deep dive
 info: |
-  How is our career data presented when shared to the world, and how can we make it better?
+  Reimagining Career Data: Making CVs Smarter, Accessible, and Machine-Readable.
   Learn more at [smhb.me](https://smhb.me)
 class: text-center
 drawings:
@@ -21,12 +21,13 @@ themeConfig:
   aboutme-helloColor: var(--slidev-theme-background)
   aboutme-nameColor: var(--slidev-theme-accents-red)
   aboutme-font-size: 1.1em
-
 ---
+
+
 
 # SEMANTIC CV FORMATS IN PDF, A DEEP DIVE
 
-How is our career data presented when shared to the world, and how can we make it better?
+Reimagining Career Data: Making CVs Smarter, Accessible, and Machine-Readable.
 
 
 ---
@@ -36,10 +37,11 @@ helloMsg: Who am I?
 name: Salim Mahboubi
 imageSrc: /me-pixel.svg
 position: left
-job:  "Web Developer since 2017"
-line1: "- Previously @BurdaForward, @Sharenow and many others"
+job:  "- Web Developer since 2017"
+line1: "- Previously @BurdaForward, @Sharenow, etc"
 line2: "... and I have a bone to pick"
 social1: www.smhb.me
+social2: The picture to the right is NOT an NFT
 ---
 
 # s
@@ -47,16 +49,20 @@ social1: www.smhb.me
 
 ---
 
+```yaml
+layout: center
+```
+
 # 1. LET'S LOOK AT A GLOSSARY
 - **Career Data** : All information related an individual's profesionnal identity, including : work history, education, projects, and contact information
 - **CIS** : (Career Information System): I'll refer to all systems that handle the career data of an individual as CIS, these systems include ATSs(Applicant Tracking Systems), Career Websites / Apps, Professional Social Networks, etc.
-- **JD** : (Job Description): A widly used HR industry term, referring to the documents describing the position's requirements, tasks, benefits, and other descriptive sections.
 
 ---
 
 ```yaml
 layout: center
 ```
+
 # 2. THE HISTORY AND STATUS QUO
 
 ---
@@ -111,6 +117,10 @@ layout: center
 
 ---
 
+```yaml
+layout: center
+```
+
 ## <div class="text-6xl">For recruiters and companies :</div>
 
 - <div class="text-4xl pb-6">ATSs extracted information can be erroneous, requiring tedious manual verification.</div>
@@ -120,6 +130,10 @@ layout: center
 
 ---
 
+```yaml
+layout: center
+```
+
 ## <div class="text-6xl">For candidates:</div>
 
 - <div class="text-4xl pb-6">Creating a concise document that optimally and fairly encompasses one’s information is difficult.</div>
@@ -128,17 +142,19 @@ layout: center
 
 ---
 
+```yaml
+layout: center
+```
+
 ## <div class="text-6xl">For CISs:</div>
 
-- <div class="text-4xl pb-6">Text is sometimes saved/recognized as raster/vectorial images instead of actual text.</div>
-- <div class="text-4xl pb-6">OCR software used to convert images back to text is still imperfect.</div>
-- <div class="text-4xl pb-6">Extracting relevant information from semantically unstructured files remains a hard problem for machines.</div>
-- <div class="text-4xl pb-6">Developing AI for this is resource-intensive, whereas a standard could simplify the process for everyone.</div>
+- <div class="text-4xl pb-6">The sheer visual diversity of CVs </div>
+- <div class="text-4xl pb-6">Extracting relevant information from unstructured files remains a hard problem for machines.</div>
 
 
 ---
 
-# PDF EXAMPLE
+## PDF EXAMPLE
 
 If we open a PDF in a text editor we might get something like this:
 
@@ -188,7 +204,9 @@ layout: center
 ---
 
 ## 4.1 JSON-Resume
-- An Open-Source Project  
+
+- An Open-Source [Project](https://jsonresume.org/t) built to inspire a new creative movement around resumes.
+  
 ```json {*}{maxHeight: '400px'}
 {
   "basics": {
@@ -256,11 +274,13 @@ layout: center
 ---
 
 ### Pros
-- kl
-- dsad
+- Simple schema.
+- Open source, no barrier.
+- Tools do what they promise.
 ### Cons
-- kl
-- dsad
+- It doesn't go beyond being a schema with a few tools. 
+- The tools are nothing exceptional and the result is like any other CV builder.
+- No wide adoption, seems like a niche set of toys for developers.
 
 ---
 
@@ -279,7 +299,7 @@ stream
 ```xml {*}{maxHeight:'300px'}
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Candidate
-		xsi:schemaLocation="http://www.europass.eu/1.0Candidate.xsd" xmlns="http://www.europass.eu/1.0"
+		xsi:schemaLocation="http://www.europass.eu/1.0 Candidate.xsd" xmlns="http://www.europass.eu/1.0"
 		xmlns:oa="http://www.openapplications.org/oagis/9"
 		xmlns:eures="http://www.europass_eures.eu/1.0" xmlns:hr="http://www.hr-xml.org/3"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -341,44 +361,105 @@ stream
 ---
 
 ### Pros
-- kl
-- dsad
+- The XML schema complete.
+- You can reupload the PDF to Europass and it gets all your info perfectly. (Do some other orgs use it?) 
+- Presumably a recognized template.
+  
 ### Cons
-- kl
-- dsad
+- None of the links to the namespaces work in the Europass XML embed.
+- You have to register to download The HR Open Standards specifications.
+- The templates are ugly and verbose.
+- No wide adoption.
 
 
 ---
 
-# The Plan 
-- Make/Adopt a standard and adapt it to be included PDF, making a special file subformat.
-- Work on great tooling and documentation both for developers and all kinds of end users.
-- Work on getting the format adopted by a existing standards organisation or found a new one.
-- Work on getting wide adoption from the public and 
+```yaml
+layout: center
+```
+
+# 5. A POTENTIAL PROJECT
+
+---
+
+```yaml
+layout: center
+```
+
+## 5.1 GOALS 
+ 
+ <ol class="mt-6">
+  <li class="text-2xl">Have a strong standard and tools that allow seamless transfer and treatment of career data.</li>
+  <li class="text-2xl">Have it adopted.</li>
+</ol>
+
+
+---
+
+```yaml
+layout: center
+```
+
+## 5.1 THE PLAN 
+
+<ul class="mt-6">
+  <li>Make/Adopt a standard and adapt it to be included into PDF, making a special file subformat.</li>
+  <li>Work on great tooling and documentation both for developers and all kinds of end users.</li>
+  <li>Work on getting the format adopted by an existing standards organization or found a new one.</li>
+  <li>Collaborate with industry leaders, recruiters, and developers to ensure the standard meets real-world needs.</li>
+  <li>Build open-source libraries and APIs to simplify integration for developers.</li>
+  <li>Create user-friendly tools for candidates to generate compliant CVs effortlessly.</li>
+  <li>Advocate for the adoption of the standard through conferences, blogs, and partnerships.</li>
+</ul>
+
+---
+
+```yaml
+layout: image
+image: /standards.png
+backgroundSize: 70%
+```
+
+## 5.2 RISKS
+
+<!--
+- **Adoption Challenges**: Resistance to adopt a new standard due to existing workflows and tools.
+- **Complexity**: The standard might become too complex, discouraging developers and users from engaging with it.
+- **Lack of Awareness**: Insufficient promotion could result in limited adoption and usage.
+- **Interoperability Issues**: Ensuring compatibility with diverse systems and platforms may be difficult.
+- **Privacy Concerns**: Mishandling of sensitive career data could lead to security and trust issues.
+- **Funding and Resources**: Sustaining the project without adequate funding or community support could hinder progress.
+- **Competition**: Existing solutions or standards might overshadow the proposed one.-->
 
 ---
 
 # 6. CURRENT STATE AND FUTURE PROSPECTS
 
-- 
+## Current State:
+  - Existing standards like JSON-Resume and Europass have limited adoption and scope.
+  - Tools for semantic career data are fragmented and lack widespread support.
+
+## Future Prospects:
+  - Increased focus on interoperability and machine-readable formats in the job market.
+  - Potential for AI and machine learning to leverage structured career data more effectively.
+  - Growing awareness of the importance of data privacy and security may drive adoption of better standards.
 
 ---
 
 # CONCLUSION
 
-- Structured and meaningful data is an important way of communication in a binary world, even when Machine Learning algorithms "can understand" unstructured text.
-
+- The goal of this presentation is not really to sell the idea for a new file format.
+- As developers, we need to see beyond the tech and see the complexities of daily life dealings.
+- We need to accept the history without having to accept status quo.
+- Let's also ponder about why we keep using file formats from 20 years ago. 
 
 ---
 
 ## Read more:
-- A good article on the pdf format: [https://medium.com/@jberkenbilt/the-structure-of-a-pdf-file-6f08114a58f6]
-- PDF 1.7 specification : [https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf]
-- qpdf program and C++ library for structural, content-preserving transformations on PDF files.  : [https://qpdf.readthedocs.io/]
-- [[https://news.ycombinator.com/item?id=11026821][Hacker News Discussion About why JSON-Resume didn't work]]
-- HR Open Standards https://www.hropenstandards.org/
+- [A good article on the pdf format](https://medium.com/@jberkenbilt/the-structure-of-a-pdf-file-6f08114a58f6)
+- [PDF 1.7 specification](https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf)
+- [qpdf program and C++ library for structural, content-preserving transformations on PDF files.](https://qpdf.readthedocs.io/)
+- [Hacker News Discussion About why JSON-Resume didn't work](https://news.ycombinator.com/item?id=11026821)
+- [HR Open Standards](https://www.hropenstandards.org/)
 
-- https://www.w3.org/TR/?filter-tr-name=semantic
-- https://www.w3.org/TR/?filter-tr-name=RDF
 
-<h2 v-click> </h2>
