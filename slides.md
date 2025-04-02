@@ -108,10 +108,11 @@ layout: center
 ---
 
 ```yaml
-layout: image
+layout: imageCaption
 
 image: /CV File journey.excalidraw.svg
 backgroundSize: contain
+caption: "This is a test caption"
 ```
 
 <!-- -->
@@ -122,7 +123,9 @@ backgroundSize: contain
 layout: center
 ```
 # 3. Challenges
-<!-- -->
+
+3.0 For everyone: PDF software and PDFs themselves are rarely accessible.
+<!-- There are ways to improve PDF accessibilty like using heading tags, which help screen reader users alot. But they are commonly overlooked -->
 
 ---
 
@@ -130,7 +133,7 @@ layout: center
 layout: center
 ```
 
-## <div class="text-6xl">For recruiters and companies :</div>
+## <div class="text-6xl">3.1 For recruiters and HR</div>
 
 - <div class="text-4xl pb-6">ATSs extracted information can be erroneous, requiring tedious manual verification.</div>
 - <div class="text-4xl pb-6">Each CV is unique in its format, presentation, and depth, making it difficult to locate relevant information.</div>
@@ -144,7 +147,7 @@ layout: center
 layout: center
 ```
 
-## <div class="text-6xl">For candidates:</div>
+## <div class="text-6xl">3.2 For candidates:</div>
 
 - <div class="text-4xl pb-6">Creating a concise document that optimally and fairly encompasses one’s information is difficult.</div>
 - <div class="text-4xl pb-6">Retyping the same information over and over.</div>
@@ -158,9 +161,9 @@ layout: center
 layout: center
 ```
 
-## <div class="text-6xl">For CISs:</div>
+## <div class="text-6xl">3.3 For CISs:</div>
 
-- <div class="text-4xl pb-6">The sheer visual diversity of CVs </div>
+- <div class="text-4xl pb-6">The sheer visual diversity of CVs.</div>
 - <div class="text-4xl pb-6">Extracting relevant information from unstructured files remains a hard problem for machines.</div>
   
 <!-- -->
@@ -397,7 +400,7 @@ stream
 
 [A simple HTML resume](https://github.com/cllu/Semantic-Resume) with semantic markups.
 
-```html {*}{maxHeight: '450px'}
+```html {*}{maxHeight: '400px'}
   <main class="page theme-default" itemscope itemtype="http://schema.org/Person">
     <header>
       <h1 itemprop="name">Chunliang Lyu</h1>
@@ -548,23 +551,23 @@ backgroundSize: 70%
 
 # CONCLUSION
 
-<ol class="mt-6 text-2xl">
+<ol class="mt-6 text-3xl">
   <li>As developers, we need to see beyond the tech and see the complexities of daily life dealings.</li>
   <li>We need to accept the history without having to accept status quo.</li>
-  <li>Let's also ponder about why we keep using file formats from 20 years ago.</li>
-  <li></li>
+  <li>Let's also ponder about why we keep using file formats from 20 years ago. (not necessarly in a negative way)</li>
+  <li>... Add your own !</li>
 </ol>
 
-<!-- There are many takeaways from this talk, and it's not only to sell a new shiny idea for a format.
-But to me the situation is a good example of a bigger UX problem, not the color or position of a button, friction in a process is more damaging than any bright color. Also this kind of problem goes beyond a single organisation, solving it won't fit in a quarterly plan or a couple of sprints, this really requires a community and inter-organisation cooperation. 
+<!-- There are many takeaways from this talk, and it's not only to sell a new shiny idea for a standard/format.
+But to me the situation is a good example of a bigger UX problem, not the color or position of a button. IMO friction in a process is more damaging than any bright neon green color. Also this kind of problem goes beyond a single organisation, solving it won't fit in a quarterly plan or a couple of sprints, this really requires a community and inter-organisation cooperation. 
 -->
 ---
 
 ## Read more:
 - [A good article on the pdf format](https://medium.com/@jberkenbilt/the-structure-of-a-pdf-file-6f08114a58f6)
 - [PDF 1.7 specification](https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf)
+- [Bundesfachstelle Barrierefreiheit's guide on Barrier-free PDF](https://www.bundesfachstelle-barrierefreiheit.de/DE/Fachwissen/Informationstechnik/Barrierefreie-PDF/barrierefreie-pdf.html)
+- [Adobe's Guide on PDF accessibility](https://www.adobe.com/accessibility/pdf/pdf-accessibility-overview.html)
 - [HR Open Standards](https://www.hropenstandards.org/)
 - [qpdf program and C++ library for structural, content-preserving transformations on PDF files.](https://qpdf.readthedocs.io/)
 - [Hacker News Discussion About why JSON-Resume didn't work](https://news.ycombinator.com/item?id=11026821)
-
-
