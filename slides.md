@@ -3,7 +3,7 @@ theme: the-unnamed
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
-title: Semantic CV formats in PDF, a deep dive
+title: SEMANTIC CV FORMATS, A SEMI-DEEP DIVE
 info: |
   Reimagining Career Data: Making CVs Smarter, Accessible, and Machine-Readable.
   Learn more at [smhb.me](https://smhb.me)
@@ -25,7 +25,7 @@ themeConfig:
 
 
 
-# SEMANTIC CV FORMATS IN PDF, A DEEP DIVE
+# SEMANTIC CV FORMATS, A SEMI-DEEP DIVE
 
 Reimagining Career Data: Making CVs Smarter, Accessible, and Machine-Readable.
 
@@ -54,8 +54,8 @@ layout: center
 ```
 
 # 1. LET'S LOOK AT A GLOSSARY
-- **Career Data** : All information related an individual's profesionnal identity, including : work history, education, projects, and contact information
-- **CIS** : (Career Information System): I'll refer to all systems that handle the career data of an individual as CIS, these systems include ATSs(Applicant Tracking Systems), Career Websites / Apps, Professional Social Networks, etc.
+- **Career Data**: All information related to an individual's professional identity, including: work history, education, projects, and contact information.
+- **CIS**: (Career Information System): I'll refer to all systems that handle the career data of an individual as CIS. These systems include ATSs (Applicant Tracking Systems), career websites/apps, professional social networks, etc.
 
 ---
 
@@ -74,7 +74,7 @@ layout: image
 image: /CV-Clay-tablet.jpg
 backgroundSize: 80%
 ```
-## 2.1 In the days of olde
+## 2.1 In the Days of Olde
 
 <!--Historically, people sent their CV as a physical document (ink on paper, probably cuneiform clay tablets too) detailing their career data, written by a human for a human's eyes. -->
 
@@ -84,10 +84,10 @@ backgroundSize: 80%
 layout: center
 ```
 
-## <div class="text-6xl">2.2 Early days of Computers</div>
+## <div class="text-6xl">2.2 Early Days of Computers</div>
 
-- <div class="text-4xl">CVs rapidly migrated towards digitized formats like PDFs, Word or txt documents, JPGs</div>
-- <div class="text-4xl">But they were still intended only for humans to read. The computer was only for the ease of transfer</div>
+- <div class="text-4xl">CVs rapidly migrated towards digitized formats like PDFs, Word, or TXT documents, JPGs.</div>
+- <div class="text-4xl">But they were still intended only for humans to read. Computers were used only to ease transfer.</div>
 
 <!-- -->
 
@@ -99,9 +99,9 @@ layout: center
 
 ## <div class="text-6xl">2.3 Today</div>
 
-- <div class="text-4xl">We still use the same file formats, mainly PDF</div>
-- <div class="text-4xl">CVs are upload to CISs, or sent via email, IM, etc</div>
-- <div class="text-4xl">The career data is extracted from CVs or re-typed into forms</div>
+- <div class="text-4xl">We still use the same file formats, mainly PDF.</div>
+- <div class="text-4xl">CVs are uploaded to CISs, or sent via email, IM, etc.</div>
+- <div class="text-4xl">The career data is extracted from CVs or re-typed into forms.</div>
 
 <!-- -->
 
@@ -124,8 +124,8 @@ layout: center
 ```
 # 3. Challenges
 
-3.0 For everyone: PDF software and PDFs themselves are rarely accessible.
-<!-- There are ways to improve PDF accessibilty like using heading tags, which help screen reader users alot. But they are commonly overlooked -->
+3.0 For Everyone: PDF software and the content of PDF files are rarely accessible.
+<!-- There are ways to improve PDF accessibility like using heading tags, which help screen reader users a lot. But they are commonly overlooked -->
 
 ---
 
@@ -133,9 +133,9 @@ layout: center
 layout: center
 ```
 
-## <div class="text-6xl">3.1 For recruiters and HR</div>
+## <div class="text-6xl">3.1 For Recruiters and HR</div>
 
-- <div class="text-4xl pb-6">ATSs extracted information can be erroneous, requiring tedious manual verification.</div>
+- <div class="text-4xl pb-6">ATS-extracted information can be erroneous, requiring tedious manual verification.</div>
 - <div class="text-4xl pb-6">Each CV is unique in its format, presentation, and depth, making it difficult to locate relevant information.</div>
 - <div class="text-4xl pb-6">Potentially missing out on getting good candidates.</div>
  
@@ -147,9 +147,9 @@ layout: center
 layout: center
 ```
 
-## <div class="text-6xl">3.2 For candidates:</div>
+## <div class="text-6xl">3.2 For Candidates:</div>
 
-- <div class="text-4xl pb-6">Creating a concise document that optimally and fairly encompasses one’s information is difficult.</div>
+- <div class="text-4xl pb-6">Creating a concise document that fairly represents one’s information is difficult.</div>
 - <div class="text-4xl pb-6">Retyping the same information over and over.</div>
 - <div class="text-4xl pb-6">Designing a CV to be readable by both humans and ATSs is challenging due to their differing requirements.</div>
 
@@ -296,8 +296,8 @@ layout: center
 - Tools do what they promise.
 ### Cons
 - It doesn't go beyond being a schema with a few tools.
-- The tools are nothing exceptional and the result is like any other CV builder. 
-- Semantics are lost after the export. The JSON isn't embedded as metadata to the html nor to the PDF.
+- The tools are nothing exceptional and the result is like any other CV builder.
+- Semantics are lost after the export. The JSON isn't embedded as metadata to the HTML nor to the PDF.
 - No wide adoption, seems like a niche set of toys for developers.
 <!-- -->
 
@@ -359,7 +359,7 @@ stream
 								<PositionHistory>
 										<PositionTitle typeCode="URI"
 												languageID="http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1">Senior
-												Fullstack Web Develeoper</PositionTitle>
+												Fullstack Web Developer</PositionTitle>
 										<eures:EmploymentPeriod>
 												<eures:StartDate>
 														<hr:FormattedDateTime>2023-06-15</hr:FormattedDateTime>
@@ -383,13 +383,13 @@ stream
 
 ### Pros
 - The schema is complete.
-- The semantics are preserved.  (Do some other orgs use it?) 
+- The semantics are preserved. (Do some other orgs use it?) 
 - Presumably a recognized template.
   
 ### Cons
 - None of the links to the namespaces work in the Europass XML embed.
 - You have to register to download The HR Open Standards specifications.
-- The related documentation, which includes use cases and implementation guidelines are only available for paying members.  
+- The related documentation, which includes use cases and implementation guidelines, is only available for paying members.  
 - The templates are ugly and verbose.
 - No wide adoption.
 <!-- -->
@@ -502,7 +502,7 @@ layout: center
 ## <div class="text-6xl">5.1 GOALS</div> 
  
  <ol class="mt-6">
-  <li class="text-4xl">Have a strong standard and tools that allow seamless transfer and treatment of career data.</li>
+  <li class="text-4xl">Have a strong standard and tools that enable seamless transfer and treatment of career data.</li>
   <li class="text-4xl">Have it adopted.</li>
 </ol>
 <!-- -->
@@ -544,19 +544,21 @@ backgroundSize: 70%
 - **Interoperability Issues**: Ensuring compatibility with diverse systems and platforms may be difficult.
 - **Privacy Concerns**: Mishandling of sensitive career data could lead to security and trust issues.
 - **Funding and Resources**: Sustaining the project without adequate funding or community support could hinder progress.
-- **Competition**: Existing solutions or standards might overshadow the proposed one.-->
+- **Competition**: Existing solutions or standards might overshadow the proposed one. 
+  -->
 
 ---
 
 
 # CONCLUSION
 
-<ol class="mt-6 text-3xl">
+<ul class="mt-6 text-2xl">
+  <li>This talk is only a seed, the idea still needs clear detailed strategy and plans to overcome the challenges and reach its goals</li>
   <li>As developers, we need to see beyond the tech and see the complexities of daily life dealings.</li>
-  <li>We need to accept the history without having to accept status quo.</li>
-  <li>Let's also ponder about why we keep using file formats from 20 years ago. (not necessarly in a negative way)</li>
-  <li>... Add your own !</li>
-</ol>
+  <li>We need to accept the history without having to accept the status quo.</li>
+  <li>Let's also ponder why we continue using file formats from 20 years ago (not necessarily in a negative way).</li>
+  <li>... Add your own!</li>
+</ul>
 
 <!-- There are many takeaways from this talk, and it's not only to sell a new shiny idea for a standard/format.
 But to me the situation is a good example of a bigger UX problem, not the color or position of a button. IMO friction in a process is more damaging than any bright neon green color. Also this kind of problem goes beyond a single organisation, solving it won't fit in a quarterly plan or a couple of sprints, this really requires a community and inter-organisation cooperation. 
@@ -564,6 +566,7 @@ But to me the situation is a good example of a bigger UX problem, not the color 
 ---
 
 ## Read more:
+
 - [A good article on the pdf format](https://medium.com/@jberkenbilt/the-structure-of-a-pdf-file-6f08114a58f6)
 - [PDF 1.7 specification](https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf)
 - [Bundesfachstelle Barrierefreiheit's guide on Barrier-free PDF](https://www.bundesfachstelle-barrierefreiheit.de/DE/Fachwissen/Informationstechnik/Barrierefreie-PDF/barrierefreie-pdf.html)
@@ -571,3 +574,9 @@ But to me the situation is a good example of a bigger UX problem, not the color 
 - [HR Open Standards](https://www.hropenstandards.org/)
 - [qpdf program and C++ library for structural, content-preserving transformations on PDF files.](https://qpdf.readthedocs.io/)
 - [Hacker News Discussion About why JSON-Resume didn't work](https://news.ycombinator.com/item?id=11026821)
+
+## Contact me:
+
+- contact@smhb.me
+- https://www.linkedin.com/in/smahboubi/
+- Let's have a chat after the talks !
