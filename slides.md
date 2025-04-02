@@ -65,6 +65,8 @@ layout: center
 
 # 2. THE HISTORY AND STATUS QUO
 
+<!-- -->
+
 ---
 
 ```yaml
@@ -87,6 +89,8 @@ layout: center
 - <div class="text-4xl">CVs rapidly migrated towards digitized formats like PDFs, Word or txt documents, JPGs</div>
 - <div class="text-4xl">But they were still intended only for humans to read. The computer was only for the ease of transfer</div>
 
+<!-- -->
+
 ---
 
 ```yaml
@@ -99,6 +103,7 @@ layout: center
 - <div class="text-4xl">CVs are upload to CISs, or sent via email, IM, etc</div>
 - <div class="text-4xl">The career data is extracted from CVs or re-typed into forms</div>
 
+<!-- -->
 
 ---
 
@@ -108,12 +113,16 @@ layout: image
 image: /CV File journey.excalidraw.svg
 backgroundSize: contain
 ```
+
+<!-- -->
+
 ---
 
 ```yaml
 layout: center
 ```
 # 3. Challenges
+<!-- -->
 
 ---
 
@@ -127,6 +136,7 @@ layout: center
 - <div class="text-4xl pb-6">Each CV is unique in its format, presentation, and depth, making it difficult to locate relevant information.</div>
 - <div class="text-4xl pb-6">Potentially missing out on getting good candidates.</div>
  
+<!-- -->
 
 ---
 
@@ -140,6 +150,8 @@ layout: center
 - <div class="text-4xl pb-6">Retyping the same information over and over.</div>
 - <div class="text-4xl pb-6">Designing a CV to be readable by both humans and ATSs is challenging due to their differing requirements.</div>
 
+<!-- -->
+
 ---
 
 ```yaml
@@ -150,7 +162,8 @@ layout: center
 
 - <div class="text-4xl pb-6">The sheer visual diversity of CVs </div>
 - <div class="text-4xl pb-6">Extracting relevant information from unstructured files remains a hard problem for machines.</div>
-
+  
+<!-- -->
 
 ---
 
@@ -270,6 +283,7 @@ layout: center
   ]
 }
 ```
+<!-- -->
 
 ---
 
@@ -278,9 +292,11 @@ layout: center
 - Open source, no barrier.
 - Tools do what they promise.
 ### Cons
-- It doesn't go beyond being a schema with a few tools. 
-- The tools are nothing exceptional and the result is like any other CV builder.
+- It doesn't go beyond being a schema with a few tools.
+- The tools are nothing exceptional and the result is like any other CV builder. 
+- Semantics are lost after the export. The JSON isn't embedded as metadata to the html nor to the PDF.
 - No wide adoption, seems like a niche set of toys for developers.
+<!-- -->
 
 ---
 
@@ -358,18 +374,111 @@ stream
 		</CandidateProfile>
 </Candidate>
 ```
+<!-- -->
+
 ---
 
 ### Pros
-- The XML schema complete.
-- You can reupload the PDF to Europass and it gets all your info perfectly. (Do some other orgs use it?) 
+- The schema is complete.
+- The semantics are preserved.  (Do some other orgs use it?) 
 - Presumably a recognized template.
   
 ### Cons
 - None of the links to the namespaces work in the Europass XML embed.
 - You have to register to download The HR Open Standards specifications.
+- The related documentation, which includes use cases and implementation guidelines are only available for paying members.  
 - The templates are ugly and verbose.
 - No wide adoption.
+<!-- -->
+
+---
+
+## 4.3 Semantic Resume
+
+[A simple HTML resume](https://github.com/cllu/Semantic-Resume) with semantic markups.
+
+```html {*}{maxHeight: '450px'}
+  <main class="page theme-default" itemscope itemtype="http://schema.org/Person">
+    <header>
+      <h1 itemprop="name">Chunliang Lyu</h1>
+      <meta itemprop="alternateName" content="Chunliang Lu">
+
+      <link itemprop="sameAs" href="https://linkedin.com/in/chunlianglyu">
+      <ul>
+        <li><a href="https://chunlianglyu.com" itemprop="url">https://chunlianglyu.com</a></li>
+      </ul>
+    </header>
+    <section class="summary">
+      <h2>Summary</h2>
+      <p>I have spent four years of PHD ...</p>
+    </section>
+    <section class="education">
+      <h2>Education</h2>
+      <details open>
+        <summary><span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+                <link href="https://www.cuhk.edu.hk/" itemprop="url">
+                <span itemprop="name">The Chinese University of Hong Kong</span>
+          </span>, Ph.D.
+          <time>2011 - 2016</time>
+        </summary>
+        <ul>
+          <li>Research Area: Entity Retrieval, Natural Language Processing, Knowledge Graph.</li>
+        </ul>
+
+      </details>
+      </details>
+    </section>
+    <section class="projects">
+      <h2>Projects <a href="https://chunlianglyu.com/projects/" target="_blank">[more]</a></h2>
+      <details open>
+        <summary><span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                <link href="https://hyperlinkapp.com/" itemprop="url">
+                <span itemprop="name">Hyperlink</span>
+          </span> (<a href="https://hyperlinkapp.com" target="_blank">https://hyperlinkapp.com</a>), Co-founder
+          <time>2014 - 2015</time>
+        </summary>
+        <p>Hyperlink is a unified platform for searching and managing personal information streams across 13 online services, such as social updates from Twitter and cloud files from Dropbox.</p>
+        <ul>
+          <li>Developed the backend in Python 3, with Flask/PostgreSQL/ElasticSearch/Celery as main stack.</li>
+          <li>Designed the frontend using AngularJS, including extensive unit and end-to-end testing.</li>
+          <li>Deployed the system on Amazon Web Services with Docker, designed and validated the scaling strategy.</li>
+        </ul>
+
+      </details>
+    </section>
+    <section class="skills">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Language: Scala, Python, Java, JavaScript, PHP, C++</li>
+        <li>Database: PostgreSQL, MongoDB, MySQL</li>
+        <li>Framework: ElasticSearch, Lucene, Hadoop, Spark, ReactJS, AngularJS</li>
+        <li>Tool: Git, Gulp, Linux, Docker, Amazon Web Services</li>
+      </ul>
+    </section>
+    <section class="publications">
+      <h2>Selected Publications <a href="https://scholar.google.com.hk/citations?user=c5GAV_MAAAAJ" target="_blank">[more]</a></h2>
+      <ul>
+        <li><strong>C. Lu</strong>, W. Lam, Y. Liao. Entity Retrieval via Entity Factoid Hierarchy. In: Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics (ACL). 2015.</li>
+        <li><strong>C. Lu</strong>, L. Bing, W. Lam. Structured Positional Entity Language Model for Enterprise Entity Retrieval. In: Proceedings of the 22nd ACM Conference on Information and Knowledge Management (CIKM). 2013.</li>
+      </ul>
+    </section>
+  </main>
+```
+
+---
+
+### Pros
+- The tool is easy to use for developers, based on markdown.
+- Uses Schema.org specs.
+- Open source.
+
+  
+### Cons
+- Uses Schema.org specs for some semantics, thus leaving a lot of empty regions that aren't covered by its schemas.
+- Non techies don't usually use markdown.
+- The templates are limited.
+- No wide adoption.
+<!-- -->
 
 
 ---
@@ -379,6 +488,7 @@ layout: center
 ```
 
 # 5. A POTENTIAL PROJECT
+<!-- -->
 
 ---
 
@@ -386,12 +496,13 @@ layout: center
 layout: center
 ```
 
-## 5.1 GOALS 
+## <div class="text-6xl">5.1 GOALS</div> 
  
  <ol class="mt-6">
-  <li class="text-2xl">Have a strong standard and tools that allow seamless transfer and treatment of career data.</li>
-  <li class="text-2xl">Have it adopted.</li>
+  <li class="text-4xl">Have a strong standard and tools that allow seamless transfer and treatment of career data.</li>
+  <li class="text-4xl">Have it adopted.</li>
 </ol>
+<!-- -->
 
 
 ---
@@ -400,9 +511,9 @@ layout: center
 layout: center
 ```
 
-## 5.1 THE PLAN 
+## <div class="text-6xl">5.1 THE PLAN</div>
 
-<ul class="mt-6">
+<ul class="mt-6 text-xl">
   <li>Make/Adopt a standard and adapt it to be included into PDF, making a special file subformat.</li>
   <li>Work on great tooling and documentation both for developers and all kinds of end users.</li>
   <li>Work on getting the format adopted by an existing standards organization or found a new one.</li>
@@ -411,6 +522,7 @@ layout: center
   <li>Create user-friendly tools for candidates to generate compliant CVs effortlessly.</li>
   <li>Advocate for the adoption of the standard through conferences, blogs, and partnerships.</li>
 </ul>
+<!-- -->
 
 ---
 
@@ -420,7 +532,7 @@ image: /standards.png
 backgroundSize: 70%
 ```
 
-## 5.2 RISKS
+## <div class="text-4xl"> 5.2 RISKS</div>
 
 <!--
 - **Adoption Challenges**: Resistance to adopt a new standard due to existing workflows and tools.
@@ -433,33 +545,26 @@ backgroundSize: 70%
 
 ---
 
-# 6. CURRENT STATE AND FUTURE PROSPECTS
-
-## Current State:
-  - Existing standards like JSON-Resume and Europass have limited adoption and scope.
-  - Tools for semantic career data are fragmented and lack widespread support.
-
-## Future Prospects:
-  - Increased focus on interoperability and machine-readable formats in the job market.
-  - Potential for AI and machine learning to leverage structured career data more effectively.
-  - Growing awareness of the importance of data privacy and security may drive adoption of better standards.
-
----
 
 # CONCLUSION
 
-- The goal of this presentation is not really to sell the idea for a new file format.
-- As developers, we need to see beyond the tech and see the complexities of daily life dealings.
-- We need to accept the history without having to accept status quo.
-- Let's also ponder about why we keep using file formats from 20 years ago. 
+<ol class="mt-6 text-2xl">
+  <li>As developers, we need to see beyond the tech and see the complexities of daily life dealings.</li>
+  <li>We need to accept the history without having to accept status quo.</li>
+  <li>Let's also ponder about why we keep using file formats from 20 years ago.</li>
+  <li></li>
+</ol>
 
+<!-- There are many takeaways from this talk, and it's not only to sell a new shiny idea for a format.
+But to me the situation is a good example of a bigger UX problem, not the color or position of a button, friction in a process is more damaging than any bright color. Also this kind of problem goes beyond a single organisation, solving it won't fit in a quarterly plan or a couple of sprints, this really requires a community and inter-organisation cooperation. 
+-->
 ---
 
 ## Read more:
 - [A good article on the pdf format](https://medium.com/@jberkenbilt/the-structure-of-a-pdf-file-6f08114a58f6)
 - [PDF 1.7 specification](https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf)
+- [HR Open Standards](https://www.hropenstandards.org/)
 - [qpdf program and C++ library for structural, content-preserving transformations on PDF files.](https://qpdf.readthedocs.io/)
 - [Hacker News Discussion About why JSON-Resume didn't work](https://news.ycombinator.com/item?id=11026821)
-- [HR Open Standards](https://www.hropenstandards.org/)
 
 
