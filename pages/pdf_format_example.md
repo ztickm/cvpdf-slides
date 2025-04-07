@@ -3,7 +3,7 @@
 <v-switch transition>
 <template #0>
 Consider this simple PDF file
-<img src="../pdf_screenshot.png" class="crop"></img>
+<img src="/pdf_screenshot.png" class="crop"></img>
 </template>
 <template #1>
 If we open it with a text editor
