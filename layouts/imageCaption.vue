@@ -21,12 +21,13 @@ const style = computed(() =>
 </script>
 
 <template>
-  <div class="slidev-layout w-full h-full" :style="style">
+  <div class="w-full h-full flex flex-col">
     <slot />
+    <div :style="style" class="h-full"></div>
     <div
-      class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50 text-white"
+      class="bg-black bg-opacity-30 p-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
     >
-      <p class="text-center">{{ caption }}</p>
+      <p class="text-center text-white text-2xl font-black">{{ caption }}</p>
     </div>
   </div>
 </template>
