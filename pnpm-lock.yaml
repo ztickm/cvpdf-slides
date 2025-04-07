@@ -17,6 +17,9 @@ importers:
       '@slidev/theme-seriph':
         specifier: latest
         version: 0.25.0
+      slidev-addon-rabbit:
+        specifier: ^0.4.0
+        version: 0.4.0
       slidev-theme-the-unnamed:
         specifier: ^0.0.22
         version: 0.0.22(@nuxt/kit@3.16.1)(@vue/compiler-sfc@3.5.13)(postcss@8.5.3)(rollup@4.38.0)(typescript@5.6.3)(vite@6.2.4(@types/node@18.19.85)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.1))
@@ -341,6 +344,9 @@ packages:
 
   '@iconify-json/carbon@1.2.8':
     resolution: {integrity: sha512-6xh4YiFBz6qoSnB3XMe23WvjTJroDFXB17J1MbiT7nATFe+70+em1acRXr8hgP/gYpwFMHFc4IvjA/IPTPnTzg==}
+
+  '@iconify-json/emojione-monotone@1.2.1':
+    resolution: {integrity: sha512-cZSNcPsuiAD6HCzCh/2dYKGh3pNI0jJlxBxQWfC33cQsPtqYZqulGBvlkThXYNvDl8VxgVHT9u+izyX/yeEIkA==}
 
   '@iconify-json/ph@1.2.2':
     resolution: {integrity: sha512-PgkEZNtqa8hBGjHXQa4pMwZa93hmfu8FUSjs/nv4oUU6yLsgv+gh9nu28Kqi8Fz9CCVu4hj1MZs9/60J57IzFw==}
@@ -2416,6 +2422,10 @@ packages:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
 
+  slidev-addon-rabbit@0.4.0:
+    resolution: {integrity: sha512-IlawxwhJdE7uG4me/LRpQdHFgR4vRX65ORqQE9jzqLCot3s/xQ7X1nVA1JSBxkl010PQdPpuRxSUdPmG+2NTKg==}
+    engines: {node: '>=18.0.0', npm: '>=9.5.0'}
+
   slidev-theme-the-unnamed@0.0.22:
     resolution: {integrity: sha512-cJFD+M9SC99/VcQKmx5siXZTzx/y+zAGPzD+BCiHrKmuH4mPtb2ykRnksgaukukK+a46BF4Mofp0oZlDcSE3hg==}
     engines: {node: '>=14.0.0', slidev: '>=0.49.0'}
@@ -3136,6 +3146,10 @@ snapshots:
   '@floating-ui/utils@0.2.9': {}
 
   '@iconify-json/carbon@1.2.8':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/emojione-monotone@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5821,6 +5835,10 @@ snapshots:
 
   slash@5.1.0:
     optional: true
+
+  slidev-addon-rabbit@0.4.0:
+    dependencies:
+      '@iconify-json/emojione-monotone': 1.2.1
 
   slidev-theme-the-unnamed@0.0.22(@nuxt/kit@3.16.1)(@vue/compiler-sfc@3.5.13)(postcss@8.5.3)(rollup@4.38.0)(typescript@5.6.3)(vite@6.2.4(@types/node@18.19.85)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.1)):
     dependencies:
